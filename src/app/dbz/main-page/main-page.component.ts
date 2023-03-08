@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
-import { DbzService } from '../services/dbz.service';
 
 @Component({
   selector: 'app-main-page',
@@ -8,7 +7,16 @@ import { DbzService } from '../services/dbz.service';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent implements OnInit {
-
+  personajes: Array<Personaje> = [
+    {
+      nombre: 'Goku',
+      poder: 15000
+    },
+    {
+      nombre: 'Vegeta',
+      poder: 7500
+    }
+  ]
   nuevo: Personaje = {
     nombre: '',
     poder: 0
@@ -19,6 +27,8 @@ export class MainPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
- 
+  agregarPersonaje(nuevoPersonaje: Personaje){
+    this.personajes.push(nuevoPersonaje);
+  }
+
 }
