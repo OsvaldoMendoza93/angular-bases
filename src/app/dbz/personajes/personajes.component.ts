@@ -9,6 +9,7 @@ import { DbzService } from '../services/dbz.service';
 export class PersonajesComponent implements OnInit {
   /* Getter */
   get personajes(){
+    console.log('entro')
     return this.dbzService.personajes;
   }
 
@@ -17,6 +18,13 @@ export class PersonajesComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    console.log(this.personajes)
+  }
+
+  eliminarPersonaje(id?: string){
+    if(!id) return
+    console.log(id)
+    this.dbzService.eliminarPersonaje(id);
   }
 
 }

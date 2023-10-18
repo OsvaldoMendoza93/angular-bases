@@ -7,12 +7,7 @@ import { Personaje } from '../interfaces/dbz.interface';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent implements OnInit {
-
-  nuevo: Personaje = {
-    nombre: '',
-    poder: 0
-  };
-
+  
   constructor() {}
 
   ngOnInit(): void {

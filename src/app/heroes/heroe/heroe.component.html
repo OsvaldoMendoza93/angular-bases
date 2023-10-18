@@ -1,17 +1,23 @@
-<h1>{{nombre}}</h1>
-<dl>
-    <td> Nombre: </td>
-    <dd> {{ nombre }} </dd>
-
-    <td> Edad: </td>
-    <dd> {{ edad }} </dd>
-
-    <td> Funcion: </td>
-    <dd> {{ obtenerNombre() }} </dd>
-
-    <td> Capitalizado: </td>
-    <dd> {{ nombreCapitalizado }} </dd>
-</dl>
-
-<button (click)="cambiarNombre()">Cambiar Héroe</button>
-<button (click)="cambiarEdad()">Cambiar Edad</button>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>{{nombre}}</h1>
+            <dl>
+                <td> Nombre: </td>
+                <dd class="text-primary"> {{ nombre }} </dd>
+            
+                <td> Edad: </td>
+                <dd class="text-primary"> {{ edad }} </dd>
+            
+                <td> Funcion: </td>
+                <dd class="text-primary"> {{ obtenerNombre() }} </dd>
+            
+                <td> Capitalizado: </td>
+                <dd class="text-primary"> {{ nombreCapitalizado }} </dd>
+            </dl>
+            
+            <button class="btn btn-primary mx-2" (click)="cambiarNombre()">Cambiar Héroe</button>
+            <button class="btn btn-primary" (click)="cambiarEdad()">Cambiar Edad</button>
+        </div>
+    </div>
+</div>
